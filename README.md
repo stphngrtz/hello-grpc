@@ -20,3 +20,14 @@ The server starts at port 9000, the client at port 8080.
 ```bash
 curl http://localhost:8080/hello/stephan
 ```
+
+The `/route` path of the client comes with some more advanced examples.
+
+```bash
+# server to client stream
+curl http://localhost:8080/route/list
+# client to server stream
+curl http://localhost:8080/route/record
+# bidirectional stream
+curl http://localhost:8080/route/chat
+```

@@ -4,7 +4,7 @@ import io.grpc.stub.StreamObserver;
 import io.quarkus.grpc.GrpcService;
 
 @GrpcService
-public class GreeterGrpcService extends GreeterGrpcGrpc.GreeterGrpcImplBase {
+public class GreeterService extends GreeterGrpc.GreeterImplBase {
 
     @Override
     public void sayHello(HelloRequest request, StreamObserver<HelloReply> responseObserver) { // default grpc API, see HelloGrpcService for mutiny style

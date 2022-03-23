@@ -15,7 +15,7 @@ public class HelloGrpcServiceTest {
     HelloGrpc helloGrpc;
 
     @GrpcClient
-    GreeterGrpc greeterGrpc;
+    Greeter greeter;
 
     @Test
     public void testHello() {
@@ -25,7 +25,7 @@ public class HelloGrpcServiceTest {
 
     @Test
     public void testGreeter() {
-        HelloReply reply = greeterGrpc.sayHello(HelloRequest.newBuilder().setName("Neo").build()).await().atMost(Duration.ofSeconds(5));
+        HelloReply reply = greeter.sayHello(HelloRequest.newBuilder().setName("Neo").build()).await().atMost(Duration.ofSeconds(5));
         assertEquals("Hello Neo!", reply.getMessage());
     }
 }
